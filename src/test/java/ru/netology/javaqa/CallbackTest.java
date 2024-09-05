@@ -10,9 +10,8 @@ import static com.codeborne.selenide.Selenide.open;
 public class CallbackTest {
 
     @Test
-    void shouldTestWebBySelenide() throws InterruptedException {
+    void shouldTestWebBySelenide() {
         open("http://localhost:9999/");
-        Thread.sleep(50000);
         SelenideElement form = $("form.form");
         form.$("[data-test-id=name] input").setValue("Ксения Линн");
         form.$("[data-test-id=phone] input").setValue("+79819170750");
